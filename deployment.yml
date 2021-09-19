@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mood
+  name: mood
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mood
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mood
+    spec:
+      containers:
+      - image: mood
+        name: mood
+        imagePullPolicy: IfNotPresent
+        resources: {}
+        ports:
+          - containerPort: 3000 
+status: {}

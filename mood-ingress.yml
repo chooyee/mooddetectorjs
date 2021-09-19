@@ -3,14 +3,13 @@ kind: Ingress
 metadata:
   name: mood-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: mood.chooyee.co
       http:
         paths:
           - path: /
-            pathType: Prefix
             backend:
               service:
                 name: mood-service

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mood-deployment
+  name: mood
   labels:
     app: mood
 spec:
